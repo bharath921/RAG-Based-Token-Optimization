@@ -24,8 +24,14 @@ def test_pdf(pdf_path):
                 f"Status={status}"
             )
 
+            if page_number == 18:
+                print("\nEXTRACTED TEXT FROM PAGE 18:")
+                print(result["text_analysis"]["normalized_text"][:500])
+
 
 if __name__ == "__main__":
     pdf_path = Path("datasets/pdfs/scanned/Adobe Scan 02-Apr-2024.pdf")
 
     test_pdf(pdf_path)
+
+    print("\nTEST FILE IS RUNNING")
